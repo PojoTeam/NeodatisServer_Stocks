@@ -1,10 +1,7 @@
 package com.pojoteam.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import java.io.Serializable;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class Company implements Serializable {
     private String companyName;
     private String symbol;
