@@ -1,18 +1,21 @@
 package com.pojoteam.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.io.Serializable;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Company implements Serializable {
     private String companyName;
     private String symbol;
     private String description;
     private String logo;
-    private int marketCap;
+    private long marketCap;
 
     public Company() {
     }
 
-    public Company(String companyName, String symbol, String description, String logo, int marketCap) {
+    public Company(String companyName, String symbol, String description, String logo, long marketCap) {
         this.companyName = companyName;
         this.symbol = symbol;
         this.description = description;
@@ -52,11 +55,11 @@ public class Company implements Serializable {
         this.logo = logo;
     }
 
-    public int getMarketCap() {
+    public long getMarketCap() {
         return marketCap;
     }
 
-    public void setMarketCap(int marketCap) {
+    public void setMarketCap(long marketCap) {
         this.marketCap = marketCap;
     }
 }
